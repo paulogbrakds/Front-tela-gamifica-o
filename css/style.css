@@ -1,0 +1,80 @@
+body {
+  background-color: #adc178;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "Zalando Sans Expanded";
+  
+}
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+
+.header {
+    background-color: #dde5b6;
+    padding: 1rem;
+    display: flex ;
+    justify-content: center ;
+    border-radius: 3rem;
+    transition: 800ms ease-in;
+
+}   
+.header:hover {
+    box-shadow: 4px 4px 20px #DDE5B6;
+    transform: scale(1.1);
+    transition: 300ms ease-in;
+    
+}
+
+.login {
+    color: #F0EAD2;
+    padding: 2rem;
+    background-color: #6C584C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1.5rem;
+
+}
+
+.login {
+    transition: 800ms ease-in;
+    box-shadow: 8px 8px 100px #DDE5B6;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    
+}
+.inputs input {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    font-family: "Zalando Sans Expanded";
+    font-weight: 500;
+    padding: 0.5rem;
+    outline-color: #adc178;
+}
+
+
+.btn{
+    padding: 10px 10px 10px 10px; /*cima / direita / baixo / esquerda */ 
+    border-radius: 1.5rem;
+    background-color:#F0EAD2;
+    font-family: "Zalando Sans Expanded";
+    font-weight: 900;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
