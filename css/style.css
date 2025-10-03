@@ -17,7 +17,19 @@ main {
 }
 
 
-
+a {
+    color: #6C584C;
+    text-decoration: none;
+}
+a:visited {
+    color: #6C584C;
+}
+a:active {
+  color: #6C584C;
+}
+a:hover {
+  color: #6C584C;
+}
 .header {
     background-color: #dde5b6;
     padding: 1rem;
@@ -57,6 +69,7 @@ main {
     
 }
 .inputs input {
+    border: none;
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;
@@ -73,8 +86,12 @@ main {
     background-color:#F0EAD2;
     font-family: "Zalando Sans Expanded";
     font-weight: 900;
+    border-color: #F0EAD2;
+    transition: 300ms ease-in-out;
 }
 
 .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    color: #A98467;
+    border-color: #A98467;
 }
