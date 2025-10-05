@@ -47,7 +47,7 @@ h1, h2, h3 {
     display: flex ;
     justify-content: center ;
     border-radius: 3rem;
-    transition: 800ms ease-in;
+    animation: fadeIn 800ms ease-in-out;
     cursor: pointer;
 
 }   
@@ -73,7 +73,7 @@ h1, h2, h3 {
 }
 
 .login {
-    transition: 800ms ease-in;
+    animation: fadeIn 800ms ease-in-out;
     box-shadow: 8px 8px 100px #DDE5B6;
 }
 /*Os Inputs e A estilização deles*/
@@ -143,4 +143,21 @@ h1, h2, h3 {
     transform: scale(1.05);
     color: #A98467;
     border-color: #A98467;
+}
+
+.btn a {
+    font-weight: 900;
+    text-decoration: none;
+    color: #A98467;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Começa um pouco para baixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição normal */
+  }
 }
