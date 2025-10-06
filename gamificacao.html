@@ -26,7 +26,27 @@
             <section class="login">
                 <h1>Pokemon Emulator:</h1>
                 <br>
-                <h3>Vo coloca o Pokemon aqui</h3>
+                <div style='width:640px;height:480px;max-width:100%'>
+                    <div id='game'></div>
+                </div>
+                
+                <script type='text/javascript'>
+                    EJS_player = '#game';
+                    
+                    // Can also be mgba
+                    EJS_core = 'gba';
+                    
+                    // URL to BIOS file
+                    EJS_biosUrl = '';
+                    
+                    // URL to Game rom
+                    EJS_gameUrl = 'roms/Game.gba';
+                    
+                    // Path to the data directory
+                    EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+                </script>
+                <!-- Carrega o emulador do CDN -->
+                <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
 
             </section>
         </main>
