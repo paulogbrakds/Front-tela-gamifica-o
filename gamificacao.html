@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--Link do Styles CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Link da fonte Zalando Sans Expanded-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="img/arrows.png" type="image/x-icon">
+   
+</head>
+<body>
+    <main>
+
+            <header class="header">
+                <a href="index.html">
+                    <nav>
+                        <h3>Volte para o Login</h3>                 
+                    </nav>
+                </a>
+            </header>
+        
+            <section class="login">
+                <h1>Pokemon Emulator:</h1>
+                <br>
+                <div style='width:640px;height:480px;max-width:100%'>
+                    <div id='game'></div>
+                </div>
+                
+                <script type='text/javascript'>
+                    EJS_player = '#game';
+                    
+                    // Can also be mgba
+                    EJS_core = 'gba';
+                    
+                    // URL to BIOS file
+                    EJS_biosUrl = '';
+                    
+                    // URL to Game rom
+                    EJS_gameUrl = 'roms/Game.gba';
+                    
+                    // Path to the data directory
+                    EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+                </script>
+                <!-- Carrega o emulador do CDN -->
+                <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+
+            </section>
+        </main>
+
+</body>
+</html>
+

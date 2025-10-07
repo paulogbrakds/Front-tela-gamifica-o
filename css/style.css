@@ -9,6 +9,10 @@ body {
   font-family: "Zalando Sans Expanded";
   
 }
+body::selection {
+    background-color: #A98467;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -16,36 +20,48 @@ main {
     gap: 2rem;
 }
 
+h1, h2, h3 {
+    cursor: default;
+}
 
-a {
-    color: #6C584C;
+/* Header */
+.header a {
     text-decoration: none;
+    color: #6C584C;
+    transition: 300ms ease-in-out;
 }
-a:visited {
+
+.header a:visited {
     color: #6C584C;
 }
-a:active {
+.header a:active {
   color: #6C584C;
 }
-a:hover {
-  color: #6C584C;
+.header a:hover {
+  color: #adc178;
 }
+
 .header {
     background-color: #dde5b6;
     padding: 1rem;
     display: flex ;
     justify-content: center ;
     border-radius: 3rem;
-    transition: 800ms ease-in;
+    animation: fadeIn 800ms ease-in-out;
+    cursor: pointer;
+    transition: 300ms ease-in;
 
 }   
 .header:hover {
     box-shadow: 4px 4px 20px #DDE5B6;
     transform: scale(1.1);
-    transition: 300ms ease-in;
+    
     
 }
-
+.header h3 {
+    cursor: pointer;
+}
+/*Página de Login e Efeito de Surgimento*/
 .login {
     color: #F0EAD2;
     padding: 2rem;
@@ -58,10 +74,10 @@ a:hover {
 }
 
 .login {
-    transition: 800ms ease-in;
+    animation: fadeIn 800ms ease-in-out;
     box-shadow: 8px 8px 100px #DDE5B6;
 }
-
+/*Os Inputs e A estilização deles*/
 .inputs {
     display: flex;
     flex-direction: column;
@@ -69,7 +85,7 @@ a:hover {
     
 }
 .inputs input {
-    border: none;
+    border: 3px solid transparent;
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;
@@ -77,9 +93,42 @@ a:hover {
     font-weight: 500;
     padding: 0.5rem;
     outline-color: #adc178;
+    transition: 300ms ease-in-out;
+}
+.inputs input:hover {
+    border-color: #adc178;
 }
 
+.inputs input:hover::placeholder {
+    transition: 300ms ease-in-out;
+    color: #adc178;
+}
+/* Efeito da Linha Suave no Link*/
 
+.cadastrese a {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 3px;
+    color: #adc178;
+}
+.cadastrese a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #adc178;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+.cadastrese a:hover::after,
+    a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.15em, 0);
+}
+
+/* Botão e Efeito de Aumentar */
 .btn{
     padding: 10px 10px 10px 10px; /*cima / direita / baixo / esquerda */ 
     border-radius: 1.5rem;
@@ -88,10 +137,28 @@ a:hover {
     font-weight: 900;
     border-color: #F0EAD2;
     transition: 300ms ease-in-out;
+    cursor: pointer;
 }
 
 .btn:hover {
     transform: scale(1.05);
     color: #A98467;
     border-color: #A98467;
+}
+
+.btn a {
+    font-weight: 900;
+    text-decoration: none;
+    color: #A98467;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Começa um pouco para baixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição normal */
+  }
 }
